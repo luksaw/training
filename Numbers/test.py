@@ -19,9 +19,6 @@ class TestWriteToFile(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.number.generate_numbers("string")
 
-    def test_print_numbers(self):
-        pass
-
     def test_write_numbers_to_file(self):
         self.assertFalse(os.path.exists("output.txt"))
         self.number.write_numbers_to_file("output.txt", 100)
@@ -33,10 +30,19 @@ class TestWriteToFile(unittest.TestCase):
             self.assertEqual(int(data[0].rstrip()), 1)
             self.assertNotEqual(int(data[-1].rstrip()), 200)
 
-    def test_read_numbers(self):
+    def test_read_numbers_from_file(self):
+        with self.assertRaises(FileNotFoundError):
+            self.number.read_numbers_from_file("output.txt")
+        self.number.write_numbers_to_file("output.txt", 50)
+        data = self.number.read_numbers_from_file("output.txt")
+        self.assertEqual(int(data[0]), 1)
+        self.assertEqual(int(data[-1]), 50)
+        self.assertEqual(int(data[24]), 25)
+
+    def test_print_numbers_from_file(self):
         self.number.write_numbers_to_file("output.txt", 100)
-        self.assertEqual(self.number.read_numbers("output.txt", 50), 50)
-        # self.assertEqual(self.number.read_numbers("output.txt", -1),  0)
+        with self.assertRaises(TypeError):
+            self.number.print_numbers_from_file("output.txt", "string")
 
 
 if __name__ == '__main__':

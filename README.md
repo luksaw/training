@@ -1,4 +1,4 @@
-# Test automation script for Symbio
+# Test automation for Symbio
 
 This repository contains test framework based on Python, Robot Framework and Selenium
 

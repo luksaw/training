@@ -4,7 +4,7 @@ This repository contains test framework based on Python, Robot Framework and Sel
 
 ## Tools used
 
-- PyCharm 2013.3
+- PyCharm 2019.3
 - Python 3.7
 - robotframework	3.1.3
 - robotframework-seleniumlibrary	4.2.0

@@ -15,10 +15,10 @@ class Numbers:
         for x in self.generate_numbers(amount):
             print(f"{x}\n", end="")
 
-    def write_numbers_to_file(self, filename):
+    def write_numbers_to_file(self, filename, amount):
         try:
             with open(filename, "w") as file:
-                for numb in self.generate_numbers(100):
+                for numb in self.generate_numbers(amount):
                     file.write(f"{numb}\n")
         except IOError as io_error:
             raise io_error
@@ -26,11 +26,22 @@ class Numbers:
     def read_numbers(self, filename, amount):
         print("reading....")
         try:
+            for x in self.generate_numbers(amount):
+                if x == amount:
+                    break
             with open(filename, "r") as file:
                 for line_number, line in enumerate(file):
                     if line_number == amount:
                         break
                     print(line, end="")
+            return int(f"{line}".rstrip()) - 1
+
+
+            # with open(filename, "r") as file:
+            #     for line_number, line in enumerate(file):
+            #         if line_number == amount:
+            #             break
+            #         print(line, end="")
         except FileNotFoundError as fnf_error:
             raise fnf_error
 
@@ -38,5 +49,5 @@ class Numbers:
 if __name__ == '__main__':
     numbers = Numbers()
     numbers.print_to_console(100)
-    numbers.write_numbers_to_file("output.txt")
+    numbers.write_numbers_to_file("output.txt", 100)
     numbers.read_numbers("output.txt", 50)

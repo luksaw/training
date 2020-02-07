@@ -2,6 +2,8 @@
 
 This repository contains test framework based on Python, Robot Framework and Selenium
 
+SKIP README IF YOU ARE ONLY INTERESTED IN ROBOT FRAMEWORK TESTS
+
 ## Tools used
 
 - PyCharm 2019.3

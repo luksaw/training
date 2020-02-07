@@ -5,7 +5,7 @@ This repository contains test framework based on Python, Robot Framework and Sel
 
 
 
-SKIP README IF YOU ARE ONLY INTERESTED IN ROBOT FRAMEWORK TESTS
+## SKIP README IF YOU ARE ONLY INTERESTED IN ROBOT FRAMEWORK TESTS
 
 
 
@@ -18,6 +18,12 @@ SKIP README IF YOU ARE ONLY INTERESTED IN ROBOT FRAMEWORK TESTS
 - robotframework-seleniumlibrary	4.2.0
 - selenium	3.141.0
 - IntelliBot plugin for PyCharm (can be installed from Settings/Plugins
+
+## Clone this repository 
+
+- From Pycharm click "Check out from Version Control -> Git
+- Input URL to this repo
+- Click Clone
 
 # Steps how to run test
 Follow below instructions to setup virtual environment and run test.

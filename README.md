@@ -1,4 +1,4 @@
-# Test automation for Symbio
+# Test automation
 
 This repository contains test framework based on Python, Robot Framework and Selenium
 
@@ -9,6 +9,7 @@ This repository contains test framework based on Python, Robot Framework and Sel
 - robotframework	3.1.2
 - robotframework-seleniumlibrary	4.2.0
 - selenium	3.141.0
+- IntelliBot plugin for PyCharm (can be installed from Settings/Plugins
 
 # Steps how to run test
 Follow below instructions to setup virtual environment and run test.
